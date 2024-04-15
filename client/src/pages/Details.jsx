@@ -31,10 +31,13 @@ const Details = () => {
             </div>
           ))}
         </div>
-        <div className="time-post">
-          <span className="material-symbols-outlined">schedule</span>
-          {item.detected_extensions.posted_at}
-        </div>
+
+        {item.detected_extensions.posted_at && (
+          <div className="time-post">
+            <span className="material-symbols-outlined">schedule</span>
+            {item.detected_extensions.posted_at}
+          </div>
+        )}
 
         <div className="company">
           {item.thumbnail ? (
