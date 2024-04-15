@@ -1,0 +1,99 @@
+@import "./components/";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: Poppins;
+  background-color: #f6f7fb;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .header {
+    font-size: 24px;
+    color: #282538;
+    font-weight: 300;
+    display: flex;
+    gap: 4px;
+    padding: 20px 0px 0px;
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 32px 0px 16px;
+  color: #b9bdcf;
+  text-transform: uppercase;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  flex: 1;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+
+  &::placeholder {
+    color: #b9bdcf;
+    opacity: 1; /* Firefox */
+  }
+
+  &::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: #b9bdcf;
+  }
+}
+
+.material-symbols-outlined {
+  color: #b9bdcf;
+  font-size: 18px;
+}
+
+.footer {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a09fb1;
+  text-align: center;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+  }
+}

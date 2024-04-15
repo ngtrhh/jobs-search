@@ -1,0 +1,139 @@
+@use "../abstract/variables.scss" as *;
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex: 1;
+
+  &__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+
+    .back {
+      color: $active-color;
+      gap: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      width: fit-content;
+
+      .material-symbols-outlined {
+        font-size: 24px;
+        color: $active-color;
+      }
+    }
+
+    .infor {
+      color: #000;
+
+      span {
+        color: $active-color;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 3;
+    font-family: Roboto;
+    flex-direction: column;
+    color: $primary-color;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      margin-bottom: 8px;
+
+      .position {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .time-post {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      color: $secondary-color;
+      font-size: 12px;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .company {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      margin: 32px 0px;
+      align-items: center;
+
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+      }
+
+      .img {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        background-color: darkgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+      }
+
+      &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .company-name {
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .address {
+          color: $secondary-color;
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+          font-size: 12px;
+          font-weight: 500;
+          align-items: center;
+        }
+      }
+    }
+
+    .description {
+      white-space: pre-wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .details {
+    flex-direction: column;
+
+    .details__content {
+      .title {
+        flex-direction: column;
+        gap: 8px;
+
+        .schedule-type {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
