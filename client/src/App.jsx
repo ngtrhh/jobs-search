@@ -19,7 +19,7 @@ function App() {
 
   const fetchJobs = async (keyword) => {
     fetch(
-      `http://jobs-search-client.vercel.app/?query=${keyword.query}&location=${keyword.location}`
+      `http://jobs-search-server.vercel.app/?query=${keyword.query}&location=${keyword.location}`
     )
       .then((res) => res.json())
       .then((res) => {
