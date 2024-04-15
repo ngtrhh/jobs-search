@@ -1,5 +1,4 @@
 const { getJson } = require("serpapi");
-const http = require("http");
 require("dotenv").config({ path: "./.env" });
 const express = require("express");
 const app = express();
@@ -39,6 +38,8 @@ const getJobs = async (res, query, location) => {
     res.end(JSON.stringify({ error: error.message }));
   }
 };
+
+console.log(process.env.SERPAPI_API_KEY);
 
 app.get("/", async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
